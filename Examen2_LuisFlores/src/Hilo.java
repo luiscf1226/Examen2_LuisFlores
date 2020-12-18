@@ -121,6 +121,7 @@ public class Hilo extends Thread {
                 modelo.addRow(newRow6);
 
                 tabla1.setModel(modelo);
+                this.stop();
             }
 
             try {
