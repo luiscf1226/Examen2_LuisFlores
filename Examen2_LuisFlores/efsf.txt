@@ -1,0 +1,12 @@
+Orden: 84;
+Fecha: 5;
+Nombre: efsf;
+Apellido: dfs;
+Edad: 1;
+Tarjeta: 13213.0;
+Total Complementos: 5.0;
+Piezas: 0;
+Papas: 1;
+Frescos: 1;
+Pures: 1;
+Pies: 1;

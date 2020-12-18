@@ -63,16 +63,27 @@ public class admintxt {
                 for (int i = 0; i < t.getHistorial().size(); i++) {
                     Date fecha = new Date();
                     bw.write("Orden: " + t.getHistorial().get(i).getNumero() + ";");
-                    bw.write("Fecha: " + fecha.getTime() + ";");
+                    bw.newLine();
+                    bw.write("Fecha: " + fecha.getDay()+ ";");
+                    bw.newLine();
                     bw.write("Nombre: " + t.getNombre() + ";");
+                    bw.newLine();
                     bw.write("Apellido: " + t.getApellido() + ";");
+                    bw.newLine();
                     bw.write("Edad: " + t.getEdad() + ";");
+                    bw.newLine();
                     bw.write("Tarjeta: " + t.getTarjeta() + ";");
-                    bw.write("Total: " + t.getTotal() + ";");
+                    bw.newLine();
+                    bw.write("Total Complementos: " + t.getTotal() + ";");
+                    bw.newLine();
                     bw.write("Piezas: " + t.getHistorial().get(i).getPiezas() + ";");
+                    bw.newLine();
                     bw.write("Papas: " + t.getHistorial().get(i).getPapas() + ";");
+                    bw.newLine();
                     bw.write("Frescos: " + t.getHistorial().get(i).getFresco() + ";");
+                    bw.newLine();
                     bw.write("Pures: " + t.getHistorial().get(i).getPure() + ";");
+                    bw.newLine();
                     bw.write("Pies: " + t.getHistorial().get(i).getPie() + ";");
                     bw.newLine();
                 }

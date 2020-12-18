@@ -1,0 +1,12 @@
+Orden: 57;
+Fecha: 5;
+Nombre: Luis;
+Apellido: Flores;
+Edad: 19;
+Tarjeta: 1.2321313E7;
+Total Complementos: 6.0;
+Piezas: 0;
+Papas: 1;
+Frescos: 1;
+Pures: 1;
+Pies: 1;

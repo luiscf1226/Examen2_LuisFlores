@@ -1,3 +1,6 @@
+
+import java.io.Serializable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,8 +11,8 @@
  *
  * @author Luis Carlos Flores
  */
-public class Ordenes {
-
+public class Ordenes implements Serializable {
+     private static final long SerialVersionUID = 777L;
     private int piezas, biscuit, pure, papas, fresco, pie;
     private int numero;
 

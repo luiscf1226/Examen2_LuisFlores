@@ -24,7 +24,7 @@ public class adminbinario {
         archivo = new File(path);
     }
 
-    public void setCompi(Clientes a) {
+    public void setclie(Clientes a) {
         lista.add(a);
     }
 
