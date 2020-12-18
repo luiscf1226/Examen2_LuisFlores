@@ -62,9 +62,17 @@ public class admintxt {
             for (Clientes t : lista) {
                 for (int i = 0; i < t.getHistorial().size(); i++) {
                     Date fecha = new Date();
+                    bw.write("Bienvenidos a Popeyes " + ";");
+                    bw.newLine();
+                    bw.write("Popeyes Virtual le Informa " + ";");
+                    bw.newLine();
+                    bw.write("Usted Ordeno " + ";");
+                    bw.newLine();
+                    bw.write("#*#*#*#*#*#*##*#*#*#*" + ";");
+                    bw.newLine();
                     bw.write("Orden: " + t.getHistorial().get(i).getNumero() + ";");
                     bw.newLine();
-                    bw.write("Fecha: " + fecha.getDay()+ ";");
+                    bw.write("Fecha: " + "18 DICIEMBRE" + ";");
                     bw.newLine();
                     bw.write("Nombre: " + t.getNombre() + ";");
                     bw.newLine();
@@ -85,6 +93,16 @@ public class admintxt {
                     bw.write("Pures: " + t.getHistorial().get(i).getPure() + ";");
                     bw.newLine();
                     bw.write("Pies: " + t.getHistorial().get(i).getPie() + ";");
+                    bw.newLine();
+                    bw.write("Gracias Por Su Compra " + ";");
+                    bw.newLine();
+                    bw.write("Use Esta Factura para un Descuento  " + ";");
+                    bw.newLine();
+                    bw.write("FELIZ NAVIDAD LE DESEA POPEYES " + ";");
+                    bw.newLine();
+                    bw.write("SU CAJERO FUE: LUIS FLORES" + ";");
+                    bw.newLine();
+                    bw.write("Mas Informacion visite Popeyes.com " + ";");
                     bw.newLine();
                 }
 

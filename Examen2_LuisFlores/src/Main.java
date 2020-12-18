@@ -514,6 +514,7 @@ public class Main extends javax.swing.JFrame {
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
         try {
+            p1.setValue(0);
             Random r = new Random();
             String nombre = a_name.getText();
             String ap = a_apellido.getText();
