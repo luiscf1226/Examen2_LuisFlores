@@ -20,6 +20,9 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        h1 = new Hilo(this.p1, this.table);
+        h1.start();
+        p1.setValue(0);
         adminbinario ap = new adminbinario("./clientes.cbm");
         ap.cargarArchivo();
 
@@ -27,16 +30,14 @@ public class Main extends javax.swing.JFrame {
         x = ap.getLista() + "";
 
         System.out.println(x);
-        Clientes cl=null;
+        Clientes cl = null;
         for (int i = 0; i < ap.getLista().size(); i++) {
-            cl=(Clientes)ap.getLista().get(i);
-             DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb1.getModel();
-            cb1.setModel(modelo);
-            modelo.addElement(cl);
-             DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb2.getModel();
+            cl = (Clientes) ap.getLista().get(i);
+           
+            DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb2.getModel();
             cb2.setModel(modelo2);
             modelo2.addElement(cl);
-              DefaultComboBoxModel modelo3 = (DefaultComboBoxModel) cb3.getModel();
+            DefaultComboBoxModel modelo3 = (DefaultComboBoxModel) cb3.getModel();
             cb3.setModel(modelo3);
             modelo3.addElement(cl);
         }
@@ -83,8 +84,6 @@ public class Main extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         a_edad = new javax.swing.JSpinner();
-        jButton6 = new javax.swing.JButton();
-        cb1 = new javax.swing.JComboBox<>();
         jd2 = new javax.swing.JDialog();
         cb2 = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -197,14 +196,6 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(79, Short.MAX_VALUE))
         );
 
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton6.setText("SIMULACION");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -212,9 +203,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(494, 494, 494)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cb1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(341, 341, 341))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -258,9 +247,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(a_piezas, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(281, 281, 281)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(110, 110, 110)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(121, 121, 121))
@@ -316,14 +303,10 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(a_pies, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(94, 94, 94)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(196, 196, 196))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(cb1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(160, 160, 160)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -560,16 +543,17 @@ public class Main extends javax.swing.JFrame {
             a.cargarArchivo();
             a.setclie(c);
             a.escribirArchivo();
-            DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb1.getModel();
-            modelo.addElement(c);
-            cb1.setModel(modelo);
+            
             DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb2.getModel();
             modelo2.addElement(c);
-            cb2.setModel(modelo);
+            cb2.setModel(modelo2);
             DefaultComboBoxModel modelo3 = (DefaultComboBoxModel) cb3.getModel();
             modelo3.addElement(c);
-            cb3.setModel(modelo);
+            cb3.setModel(modelo3);
             JOptionPane.showMessageDialog(this, "GRACIAS POR ORDENAR");
+            h1.setE(c);
+            h1.setAvanzar(true);
+           // p1.setValue(0);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "ERROR AL CREAR");
@@ -584,13 +568,6 @@ public class Main extends javax.swing.JFrame {
         jd1.setLocationRelativeTo(this);//centro de la principal
         jd1.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        // TODO add your handling code here:
-        // Clientes c = (Clientes) cb1.getSelectedItem();
-        // h1.setAvanzar(true);
-
-    }//GEN-LAST:event_jButton6MouseClicked
 
     private void cb2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb2ItemStateChanged
         // TODO add your handling code here:
@@ -704,14 +681,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JSpinner a_pure;
     private javax.swing.JSpinner a_pure1;
     private javax.swing.JTextField a_tarjeta;
-    private javax.swing.JComboBox<String> cb1;
     private javax.swing.JComboBox<String> cb2;
     private javax.swing.JComboBox<String> cb3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -743,4 +718,5 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
     Hilo h1;
+
 }
