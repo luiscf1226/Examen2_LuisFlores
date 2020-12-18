@@ -1,0 +1,12 @@
+Orden: 21;
+Fecha: 5;
+Nombre: asds;
+Apellido: dasdd;
+Edad: 21;
+Tarjeta: 323.0;
+Total Complementos: 2.0;
+Piezas: 2;
+Papas: 0;
+Frescos: 0;
+Pures: 0;
+Pies: 0;

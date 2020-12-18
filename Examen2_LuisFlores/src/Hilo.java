@@ -69,12 +69,11 @@ public class Hilo extends Thread {
 
         while (true) {
             if (avanzar) {
-                progBar.setMaximum(10);
+                progBar.setMaximum(5);
                 progBar.setValue(progBar.getValue() + 10);
                 //activar y modificar propiedad stringPainted para que esto funciones
-
-                //if (progBar.getValue() == 1) {
-                    
+                
+               
                         String num = "";
                         String elem1 = "";
                         String elem2 = "";
@@ -86,12 +85,12 @@ public class Hilo extends Thread {
                         String piez = "", bis = "", pu = "", papas = "", refre = "", pie = "";
 
                         for (int i = 0; i < e.getHistorial().size(); i++) {
-                            piez = e.getHistorial().get(i).getPiezas() + " Minutos";
-                            bis = e.getHistorial().get(i).getBiscuit() + " Minuto";
-                            pu = e.getHistorial().get(i).getPure() + " Minutos";
-                            papas = e.getHistorial().get(i).getPapas() + " Minutos";
-                            refre = e.getHistorial().get(i).getFresco() + " Minuto";
-                            pie = e.getHistorial().get(i).getPie() + "  Minutos";
+                            piez = e.getHistorial().get(i).getPiezas() * 4 + " Minutos";
+                            bis = e.getHistorial().get(i).getBiscuit() * 1 + " Minuto";
+                            pu = e.getHistorial().get(i).getPure() * 2 + " Minutos";
+                            papas = e.getHistorial().get(i).getPapas() * 3 + " Minutos";
+                            refre = e.getHistorial().get(i).getFresco() * 1 + " Minuto";
+                            pie = e.getHistorial().get(i).getPie() * 5 + "  Minutos";
                             num = "Numero:  " + e.getHistorial().get(i).getNumero() + "";
                             elem1 = "Piezas: " + e.getHistorial().get(i).getPiezas() + "";
                             elem2 = "Biscuits: " + e.getHistorial().get(i).getBiscuit() + "";
@@ -122,12 +121,11 @@ public class Hilo extends Thread {
                         modelo.addRow(newRow6);
 
                         tabla1.setModel(modelo);
-
-                    
-               // }
+                       
+                
             }
             try {
-                Thread.sleep(50);
+                Thread.sleep(70);
             } catch (InterruptedException ex) {
             }
         }

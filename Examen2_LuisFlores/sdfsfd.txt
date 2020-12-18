@@ -1,0 +1,12 @@
+Orden: 49;
+Fecha: 5;
+Nombre: sdfsfd;
+Apellido: dsfdsff;
+Edad: 1;
+Tarjeta: 434.0;
+Total Complementos: 2.0;
+Piezas: 2;
+Papas: 0;
+Frescos: 0;
+Pures: 0;
+Pies: 0;

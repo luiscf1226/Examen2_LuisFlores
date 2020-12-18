@@ -1,0 +1,12 @@
+Orden: 43;
+Fecha: 5;
+Nombre: d;
+Apellido: d;
+Edad: 1;
+Tarjeta: 3.0;
+Total Complementos: 2.0;
+Piezas: 2;
+Papas: 0;
+Frescos: 0;
+Pures: 0;
+Pies: 0;

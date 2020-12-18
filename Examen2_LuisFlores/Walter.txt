@@ -1,0 +1,12 @@
+Orden: 6;
+Fecha: 5;
+Nombre: Walter;
+Apellido: Reyes;
+Edad: 10;
+Tarjeta: 3.213234E7;
+Total Complementos: 13.0;
+Piezas: 2;
+Papas: 2;
+Frescos: 3;
+Pures: 2;
+Pies: 2;
